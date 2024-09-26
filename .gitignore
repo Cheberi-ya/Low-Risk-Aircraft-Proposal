@@ -1,0 +1,8 @@
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary files
+~$*
+
+# Ignore presentations with temporary edit markers
+~$Presentation.pptx

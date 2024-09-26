@@ -10,12 +10,12 @@ I decided to filter the data and use data from 2000 to 2023, since it is more cu
 These are the objectives i hope to achieve with this analysis:
 
 main objective: 
-- To do risk analysis and determine the lowest risk aircraft
+- To do analysis determine the lowest risk aircraft
 
 Other objectives:
-1. To calculate the accident rates for different types of aircraft engines.
+1. To calculate the injury severity for different types of aircraft engines.
 2. To evaluate the severity of accident injuries for different aircraft types.
-3. To calculate the numbers of uninjured passangers of the different aircrafts types.
+3. To assess the Passenger safety of the different aircrafts types.
 
 ### 2. Data 
 The data was analysed by Python pandas run on a jupyter notebook.
@@ -116,7 +116,7 @@ ax.set_title('Changes of Uninjured cases over time');
 
 
     
-![png](output_7_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_7_0.png)
     
 
 
@@ -134,7 +134,7 @@ ax.legend();
 
 
     
-![png](output_8_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_8_0.png)
     
 
 
@@ -619,7 +619,7 @@ ax.set_ylabel('Distribution');
 
 
     
-![png](output_28_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_28_0.png)
     
 
 
@@ -635,7 +635,7 @@ ax.set_ylabel('Distribution');
 
 
     
-![png](output_29_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_29_0.png)
     
 
 
@@ -651,7 +651,7 @@ ax.set_ylabel('Distribution');
 
 
     
-![png](output_30_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_30_0.png)
     
 
 
@@ -667,7 +667,7 @@ ax.set_ylabel('Distribution');
 
 
     
-![png](output_31_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_31_0.png)
     
 
 
@@ -730,7 +730,7 @@ df['Make'] = df['Make'].str.lower()
 df.to_csv('Aviation_data_cleaned.csv')
 ```
 
-We can now begin data analysis. We begin by analysing the engine types and how they affect injury severity.
+We can now begin data analysis. We begin by analysing the engine types and how they affect injury severity and passanger safety.
 
 
 ```python
@@ -754,7 +754,7 @@ ax.tick_params(axis = 'x' , labelrotation = 45);
 
 
     
-![png](output_39_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_39_0.png)
     
 
 
@@ -772,7 +772,7 @@ ax.tick_params(axis = 'x' , labelrotation = 45);
 
 
     
-![png](output_40_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_40_0.png)
     
 
 
@@ -787,7 +787,7 @@ ax.tick_params(axis='x', labelrotation = 45);
 
 
     
-![png](output_41_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_41_0.png)
     
 
 
@@ -803,7 +803,7 @@ ax.tick_params(axis = 'x' , labelrotation = 45);
 
 
     
-![png](output_42_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_42_0.png)
     
 
 
@@ -877,12 +877,6 @@ df2['Make'] = df2['Make'].replace(to_replace = make_dict)
 df2['Make'].value_counts()
 ```
 
-    <ipython-input-35-6dcb916ebdfb>:12: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      df2['Make'] = df2['Make'].replace(to_replace = make_dict)
     
 
 
@@ -924,7 +918,7 @@ ax.legend();
 
 
     
-![png](output_51_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_51_0.png)
     
 
 
@@ -944,7 +938,7 @@ ax.legend();
 
 
     
-![png](output_52_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_52_0.png)
     
 
 
@@ -964,7 +958,7 @@ ax.legend();
 
 
     
-![png](output_53_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_53_0.png)
     
 
 
@@ -983,7 +977,7 @@ ax.tick_params(axis = 'x' , labelrotation = 45);
 
 
     
-![png](output_54_0.png)
+![png](https://github.com/Cheberi-ya/Low-Risk-Aircraft-Proposal/blob/main/Images/output_54_0.png)
     
 
 
@@ -1047,10 +1041,11 @@ df2_cleaned.to_excel('Aviation_data_cleaned.xlsx')
 
 ### Reccomendations:
 from the data we have done analysis for, here are the three reccomendations for the best aircraft types together with the reasons: 
-1. Mc donnell douglas - Have many uninjured passangers, few injuries and few fatalities.
-2. Bombardier - Have many uninjured passangers and few fatalities and injuries.
-3. Embraer - Have many uninjured passangers and few fatalities and injuries.
+1. Mc donnell douglas - Has high passanger safety, few injuries and few fatalities.
+2. Bombardier - Has high passanger safety and few fatalities and injuries.
+3. Embraer - Has high passanger safety and few fatalities and injuries.
 
+The tableau dashboard for this work can be found here https://public.tableau.com/app/profile/linda.temoet/viz/Low-Risk-Aircraft-Proposal-2024-09-LT/LowRiskAircraftProposal?publish=yes
 
 ```python
 
